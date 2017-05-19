@@ -139,6 +139,13 @@ personLast NVARCHAR(25)		NOT NULL,
 				classId	NVARCHAR(10)		FOREIGN KEY	(classId)		REFERENCES Class(classId) NOT NULL,													
 	personEmail	NVARCHAR(50) NOT NULL);
 
+CREATE TABLE Presentation(
+	presentationId INT IDENTITY PRIMARY KEY NOT NULL,	
+	presentationTitle NVARCHAR(75)		NOT NULL,	
+	presentationSpeaker NVARCHAR(75)		NOT NULL,	
+);
   END
 
   select * from ClassDifficulty
+
+  select * from Presentation
