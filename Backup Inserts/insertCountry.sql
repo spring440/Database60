@@ -1,0 +1,17 @@
+CREATE PROC insertCountry
+  AS
+  BEGIN
+    BEGIN TRY
+	  INSERT INTO Country VALUES ('AU','AUSTRALIA');
+	  INSERT INTO Country VALUES ('CA','CANADA');
+	  INSERT INTO Country VALUES ('UK','UNITED KINGDOM');
+	  INSERT INTO Country VALUES ('US','UNITED STATES');
+	  INSERT INTO Country VALUES ('HU','HUNGARY');
+	  INSERT INTO Country VALUES ('UA','UKRAINE');
+	END TRY
+    BEGIN CATCH
+    END CATCH
+  END
+
+  EXEC insertCountry
+  select * from Country
